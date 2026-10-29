@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Recipe } from "../data/recepies";
 
+
 export default function RecipeCard({recipe}:{recipe:Recipe}){
     return (
         <Link href={`/recipe/${recipe.id}`} className="card">
@@ -14,6 +15,7 @@ export default function RecipeCard({recipe}:{recipe:Recipe}){
                     <span className="chip">{recipe.minutes}</span>
                     <span className="chip">{recipe.difficulty}</span>
                     <span className="chip">{recipe.cuisine}</span>
+                    
                 </div>
             </div>
         </Link>
