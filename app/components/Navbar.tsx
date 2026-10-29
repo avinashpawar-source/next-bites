@@ -1,12 +1,21 @@
-export default function Navbar(){
-    return (
-        <nav className="navbar">
-            <a className="brand" href="/">🍽️NextBites</a>
+import Link from "next/link"
 
-            <div className="nav-links">
-                <a className="" href="/">Recipes</a>
-                <a href="/" target="_blank" rel="noreffered">Github</a>
-            </div>
-        </nav>
-    )
+export default function NavBar() {
+  return (
+    <header className="nav">
+      <Link href="/" className="brand">
+        <span className="brand-mark">🍴</span> NextBites
+      </Link>
+      <nav className="nav-links">
+        <Link href="/">Recipes</Link>
+        <a
+          href="https://github.com/kalviumcommunity/nextbites"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+      </nav>
+    </header>
+  );
 }
